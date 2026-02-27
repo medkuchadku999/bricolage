@@ -3,87 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
+    <title>Bricolage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <div class="logo">My Blog</div>
+
+    <!-- Thin top nav -->
+    <nav class="topnav">
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
             <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <svg class="sun-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg class="sun-icon" style="display:none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
             </svg>
         </button>
+    </nav>
+
+    <!-- Mix & Match tile header (IS the logo) -->
+    <header class="tile-header">
+        <div class="tile-row">
+
+            <div class="tile" id="tile-0">
+                <div class="tile-face is-active">
+                    <span class="tile-letter">BRI</span>
+                </div>
+                <div class="tile-face">
+                    <div class="ph" style="background:#e8d5b7;"><span>C1 top</span></div>
+                </div>
+                <div class="tile-face">
+                    <div class="ph" style="background:#c8deb8;"><span>C2 top</span></div>
+                </div>
+                <div class="tile-face">
+                    <div class="ph" style="background:#b8cce0;"><span>C3 top</span></div>
+                </div>
+                <div class="tile-face">
+                    <div class="ph" style="background:#e0c8d8;"><span>C4 top</span></div>
+                </div>
+                <div class="tile-face">
+                    <div class="ph" style="background:#dde0b8;"><span>C5 top</span></div>
+                </div>
+            </div>
+
+            <div class="tile" id="tile-1">
+                <div class="tile-face is-active">
+                    <span class="tile-letter">COL</span>
+                </div>
+                <div class="tile-face">
+                    <div class="ph" style="background:#e8d5b7;"><span>C1 mid</span></div>
+                </div>
+                <div class="tile-face">
+                    <div class="ph" style="background:#c8deb8;"><span>C2 mid</span></div>
+                </div>
+                <div class="tile-face">
+                    <div class="ph" style="background:#b8cce0;"><span>C3 mid</span></div>
+                </div>
+                <div class="tile-face">
+                    <div class="ph" style="background:#e0c8d8;"><span>C4 mid</span></div>
+                </div>
+                <div class="tile-face">
+                    <div class="ph" style="background:#dde0b8;"><span>C5 mid</span></div>
+                </div>
+            </div>
+
+            <div class="tile" id="tile-2">
+                <div class="tile-face is-active">
+                    <span class="tile-letter">AGE</span>
+                </div>
+                <div class="tile-face">
+                    <div class="ph" style="background:#e8d5b7;"><span>C1 btm</span></div>
+                </div>
+                <div class="tile-face">
+                    <div class="ph" style="background:#c8deb8;"><span>C2 btm</span></div>
+                </div>
+                <div class="tile-face">
+                    <div class="ph" style="background:#b8cce0;"><span>C3 btm</span></div>
+                </div>
+                <div class="tile-face">
+                    <div class="ph" style="background:#e0c8d8;"><span>C4 btm</span></div>
+                </div>
+                <div class="tile-face">
+                    <div class="ph" style="background:#dde0b8;"><span>C5 btm</span></div>
+                </div>
+            </div>
+
+        </div>
+        <p class="tile-hint">click to mix</p>
     </header>
 
     <div class="grid-container">
-        <a href="post-welcome.html" class="grid-item">
-            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=450&fit=crop" alt="Laptop and notebook" class="grid-item-image">
-            <div class="grid-item-content">
-                <h2 class="grid-item-title">Welcome to My Blog</h2>
-                <p class="grid-item-excerpt">An introduction to this space and what I hope to share here.</p>
-                <div class="grid-item-meta">February 11, 2026</div>
-                <span class="grid-item-tag">Introduction</span>
-            </div>
-        </a>
-
-        <a href="post-github-pages.html" class="grid-item">
+        <a href="post003.html" class="grid-item">
             <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=600&h=450&fit=crop" alt="GitHub logo" class="grid-item-image">
             <div class="grid-item-content">
-                <h2 class="grid-item-title">Getting Started with GitHub Pages</h2>
+                <h2 class="grid-item-title">UB Confidential No.3: Complicity</h2>
                 <p class="grid-item-excerpt">A guide to hosting your static website for free.</p>
                 <div class="grid-item-meta">February 10, 2026</div>
-                <span class="grid-item-tag">Tutorial</span>
-                <span class="grid-item-tag">Web</span>
             </div>
         </a>
 
-        <a href="post-why-blog.html" class="grid-item">
+        <a href="post001.html" class="grid-item">
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=450&fit=crop" alt="Laptop and notebook" class="grid-item-image">
             <div class="grid-item-content">
-                <h2 class="grid-item-title">Why I Started Blogging</h2>
-                <p class="grid-item-excerpt">Reflections on documenting thoughts, sharing knowledge, and building in public.</p>
-                <div class="grid-item-meta">February 8, 2026</div>
-                <span class="grid-item-tag">Personal</span>
+                <h2 class="grid-item-title">UB Confidential No.1: Admission</h2>
+                <p class="grid-item-excerpt">An introduction to this space and what I hope to share here.</p>
+                <div class="grid-item-meta">February 11, 2026</div>
             </div>
         </a>
 
-        <a href="post-example.html" class="grid-item">
-            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=450&fit=crop" alt="Code on screen" class="grid-item-image">
+        <a href="post000.html" class="grid-item">
+            <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=600&h=450&fit=crop" alt="GitHub logo" class="grid-item-image">
             <div class="grid-item-content">
-                <h2 class="grid-item-title">Building for the Web in 2026</h2>
-                <p class="grid-item-excerpt">Thoughts on modern web development and what excites me.</p>
-                <div class="grid-item-meta">February 5, 2026</div>
-                <span class="grid-item-tag">Technology</span>
-            </div>
-        </a>
-
-        <a href="#" class="grid-item">
-            <div class="grid-item-content">
-                <h2 class="grid-item-title">On Creativity and Constraints</h2>
-                <p class="grid-item-excerpt">How limitations can unlock new possibilities.</p>
-                <div class="grid-item-meta">February 1, 2026</div>
-                <span class="grid-item-tag">Essay</span>
-            </div>
-        </a>
-
-        <a href="#" class="grid-item">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=450&fit=crop" alt="Person thinking" class="grid-item-image">
-            <div class="grid-item-content">
-                <h2 class="grid-item-title">What I'm Learning This Month</h2>
-                <p class="grid-item-excerpt">A collection of resources and ideas I've been exploring.</p>
-                <div class="grid-item-meta">January 28, 2026</div>
-                <span class="grid-item-tag">Learning</span>
+                <h2 class="grid-item-title">UB Confidential No.0: A Primer</h2>
+                <p class="grid-item-excerpt">A guide to hosting your static website for free.</p>
+                <div class="grid-item-meta">February 10, 2026</div>
             </div>
         </a>
     </div>
