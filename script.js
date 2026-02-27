@@ -35,9 +35,9 @@ if (tiles.length) {
         const currFace = faces[curr];
         const nextFace = faces[next];
 
-        // Make sure next face starts below (in case it's been positioned before)
+        // Make sure next face starts at the back of the drum (in case it's been positioned before)
         nextFace.classList.remove('is-active', 'is-entering', 'is-exiting');
-        nextFace.style.transform = 'translateY(100%)';
+        nextFace.style.transform = 'rotateX(90deg)';
 
         // Force reflow so the browser registers the reset before animating
         void nextFace.offsetWidth;
@@ -54,7 +54,7 @@ if (tiles.length) {
         const cleanup = (e) => {
             if (e.target !== currFace) return;
             currFace.classList.remove('is-exiting');
-            currFace.style.transform = 'translateY(100%)';
+            currFace.style.transform = 'rotateX(90deg)';
         };
         currFace.addEventListener('animationend', cleanup, { once: true });
 

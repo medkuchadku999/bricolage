@@ -68,7 +68,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 20px 24px;
+    padding: 40px 0 24px;
     gap: 12px;
 }
 
@@ -78,6 +78,8 @@ body {
     gap: var(--tile-gap);
     width: 100%;
     max-width: var(--layout-max);
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 /* Individual tile: square, clips its children */
@@ -100,44 +102,44 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* hidden by default — translated below the tile */
-    transform: translateY(100%);
+    /* hidden by default — rotated to the back of the drum */
+    transform: rotateX(90deg);
+    backface-visibility: hidden;
     /* no transition by default; JS adds .is-entering / .is-exiting */
 }
 
 /* The visible face */
 .tile-face.is-active {
-    transform: translateY(0%);
+    transform: rotateX(0deg);
 }
 
 /* Rolling in from below */
 .tile-face.is-entering {
-    animation: slideUp 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: rollIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 /* Rolling out upward */
 .tile-face.is-exiting {
-    animation: slideOut 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: rollOut 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-@keyframes slideUp {
-    from { transform: translateY(100%); }
-    to   { transform: translateY(0%); }
+@keyframes rollIn {
+    from { transform: rotateX(90deg); }
+    to   { transform: rotateX(0deg); }
 }
 
-@keyframes slideOut {
-    from { transform: translateY(0%); }
-    to   { transform: translateY(-100%); }
+@keyframes rollOut {
+    from { transform: rotateX(0deg); }
+    to   { transform: rotateX(-90deg); }
 }
 
-/* Wiggle hint animation */
+/* Wiggle hint animation — lifts the bottom edge toward the viewer,
+   hinting at the direction the block will turn */
 @keyframes wiggle {
-    0%   { transform: rotate(0deg); }
-    20%  { transform: rotate(-3deg); }
-    40%  { transform: rotate(3deg); }
-    60%  { transform: rotate(-2deg); }
-    80%  { transform: rotate(1deg); }
-    100% { transform: rotate(0deg); }
+    0%   { transform: perspective(500px) rotateX(0deg); }
+    35%  { transform: perspective(500px) rotateX(-6deg); }
+    65%  { transform: perspective(500px) rotateX(-1.5deg); }
+    100% { transform: perspective(500px) rotateX(0deg); }
 }
 
 .tile.is-wiggling {
