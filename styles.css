@@ -76,7 +76,7 @@ body {
     display: flex;
     gap: 8%;
     width: 100%;
-
+    max-width: 50%;
     padding: 0 4%;
     box-sizing: border-box;
 }
